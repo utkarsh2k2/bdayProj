@@ -1,0 +1,154 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * eventtype
+ *
+ * @ORM\Table(name="eventtype")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\eventtypeRepository")
+ */
+class eventtype
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="EventName", type="string", length=255)
+     */
+    private $eventName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Alias", type="string", length=255, unique=true)
+     */
+    private $alias;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="Time", type="time")
+     */
+    private $time;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="MaxLimit", type="integer")
+     */
+    private $maxLimit;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set eventName
+     *
+     * @param string $eventName
+     * @return eventtype
+     */
+    public function setEventName($eventName)
+    {
+        $this->eventName = $eventName;
+
+        return $this;
+    }
+
+    /**
+     * Get eventName
+     *
+     * @return string 
+     */
+    public function getEventName()
+    {
+        return $this->eventName;
+    }
+
+    /**
+     * Set alias
+     *
+     * @param string $alias
+     * @return eventtype
+     */
+    public function setAlias($alias)
+    {
+        $this->alias = $alias;
+
+        return $this;
+    }
+
+    /**
+     * Get alias
+     *
+     * @return string 
+     */
+    public function getAlias()
+    {
+        return $this->alias;
+    }
+
+    /**
+     * Set time
+     *
+     * @param \DateTime $time
+     * @return eventtype
+     */
+    public function setTime($time)
+    {
+        $this->time = $time;
+
+        return $this;
+    }
+
+    /**
+     * Get time
+     *
+     * @return \DateTime 
+     */
+    public function getTime()
+    {
+        return $this->time;
+    }
+
+    /**
+     * Set maxLimit
+     *
+     * @param integer $maxLimit
+     * @return eventtype
+     */
+    public function setMaxLimit($maxLimit)
+    {
+        $this->maxLimit = $maxLimit;
+
+        return $this;
+    }
+
+    /**
+     * Get maxLimit
+     *
+     * @return integer 
+     */
+    public function getMaxLimit()
+    {
+        return $this->maxLimit;
+    }
+}

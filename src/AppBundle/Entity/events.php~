@@ -1,0 +1,335 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * events
+ *
+ * @ORM\Table(name="events")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\eventsRepository")
+ */
+class events
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="E1T1", type="integer", nullable=true)
+     */
+    private $e1T1;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="E1T2", type="integer", nullable=true)
+     */
+    private $e1T2;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="E2T1", type="integer", nullable=true)
+     */
+    private $e2T1;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="E2T2", type="integer", nullable=true)
+     */
+    private $e2T2;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="E3T1", type="integer", nullable=true)
+     */
+    private $e3T1;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="E3T2", type="integer", nullable=true)
+     */
+    private $e3T2;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="E4T1", type="integer", nullable=true)
+     */
+    private $e4T1;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="E4T2", type="integer", nullable=true)
+     */
+    private $e4T2;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="E5T1", type="integer", nullable=true)
+     */
+    private $e5T1;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="E5T2", type="integer", nullable=true)
+     */
+    private $e5T2;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set e1T1
+     *
+     * @param integer $e1T1
+     * @return events
+     */
+    public function setE1T1($e1T1)
+    {
+        $this->e1T1 = $e1T1;
+
+        return $this;
+    }
+
+    /**
+     * Get e1T1
+     *
+     * @return integer 
+     */
+    public function getE1T1()
+    {
+        return $this->e1T1;
+    }
+
+    /**
+     * Set e1T2
+     *
+     * @param integer $e1T2
+     * @return events
+     */
+    public function setE1T2($e1T2)
+    {
+        $this->e1T2 = $e1T2;
+
+        return $this;
+    }
+
+    /**
+     * Get e1T2
+     *
+     * @return integer 
+     */
+    public function getE1T2()
+    {
+        return $this->e1T2;
+    }
+
+    /**
+     * Set e2T1
+     *
+     * @param integer $e2T1
+     * @return events
+     */
+    public function setE2T1($e2T1)
+    {
+        $this->e2T1 = $e2T1;
+
+        return $this;
+    }
+
+    /**
+     * Get e2T1
+     *
+     * @return integer 
+     */
+    public function getE2T1()
+    {
+        return $this->e2T1;
+    }
+
+    /**
+     * Set e2T2
+     *
+     * @param integer $e2T2
+     * @return events
+     */
+    public function setE2T2($e2T2)
+    {
+        $this->e2T2 = $e2T2;
+
+        return $this;
+    }
+
+    /**
+     * Get e2T2
+     *
+     * @return integer 
+     */
+    public function getE2T2()
+    {
+        return $this->e2T2;
+    }
+
+    /**
+     * Set e3T1
+     *
+     * @param integer $e3T1
+     * @return events
+     */
+    public function setE3T1($e3T1)
+    {
+        $this->e3T1 = $e3T1;
+
+        return $this;
+    }
+
+    /**
+     * Get e3T1
+     *
+     * @return integer 
+     */
+    public function getE3T1()
+    {
+        return $this->e3T1;
+    }
+
+    /**
+     * Set e3T2
+     *
+     * @param integer $e3T2
+     * @return events
+     */
+    public function setE3T2($e3T2)
+    {
+        $this->e3T2 = $e3T2;
+
+        return $this;
+    }
+
+    /**
+     * Get e3T2
+     *
+     * @return integer 
+     */
+    public function getE3T2()
+    {
+        return $this->e3T2;
+    }
+
+    /**
+     * Set e4T1
+     *
+     * @param integer $e4T1
+     * @return events
+     */
+    public function setE4T1($e4T1)
+    {
+        $this->e4T1 = $e4T1;
+
+        return $this;
+    }
+
+    /**
+     * Get e4T1
+     *
+     * @return integer 
+     */
+    public function getE4T1()
+    {
+        return $this->e4T1;
+    }
+
+    /**
+     * Set e4T2
+     *
+     * @param integer $e4T2
+     * @return events
+     */
+    public function setE4T2($e4T2)
+    {
+        $this->e4T2 = $e4T2;
+
+        return $this;
+    }
+
+    /**
+     * Get e4T2
+     *
+     * @return integer 
+     */
+    public function getE4T2()
+    {
+        return $this->e4T2;
+    }
+
+    /**
+     * Set e5T1
+     *
+     * @param integer $e5T1
+     * @return events
+     */
+    public function setE5T1($e5T1)
+    {
+        $this->e5T1 = $e5T1;
+
+        return $this;
+    }
+
+    /**
+     * Get e5T1
+     *
+     * @return integer 
+     */
+    public function getE5T1()
+    {
+        return $this->e5T1;
+    }
+
+    /**
+     * Set e5T2
+     *
+     * @param integer $e5T2
+     * @return events
+     */
+    public function setE5T2($e5T2)
+    {
+        $this->e5T2 = $e5T2;
+
+        return $this;
+    }
+
+    /**
+     * Get e5T2
+     *
+     * @return integer 
+     */
+    public function getE5T2()
+    {
+        return $this->e5T2;
+    }
+
+}
