@@ -22,32 +22,24 @@ class eventtype
     protected $id;
 
     /**
+     * @ORM\OneToOne(targetEntity="events", mappedBy="eventtype1")
+     */
+    protected $event1;
+    
+    /**
      * @var string
      *
      * @ORM\Column(name="EventName", type="string", length=255)
      */
-    private $eventName;
+    protected $eventName;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Alias", type="string", length=255, unique=true)
-     */
-    private $alias;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="Time", type="time")
-     */
-    private $time;
 
     /**
      * @var int
      *
      * @ORM\Column(name="MaxLimit", type="integer")
      */
-    private $maxLimit;
+    protected $maxLimit;
 
 
     /**
@@ -83,51 +75,6 @@ class eventtype
         return $this->eventName;
     }
 
-    /**
-     * Set alias
-     *
-     * @param string $alias
-     * @return eventtype
-     */
-    public function setAlias($alias)
-    {
-        $this->alias = $alias;
-
-        return $this;
-    }
-
-    /**
-     * Get alias
-     *
-     * @return string 
-     */
-    public function getAlias()
-    {
-        return $this->alias;
-    }
-
-    /**
-     * Set time
-     *
-     * @param \DateTime $time
-     * @return eventtype
-     */
-    public function setTime($time)
-    {
-        $this->time = $time;
-
-        return $this;
-    }
-
-    /**
-     * Get time
-     *
-     * @return \DateTime 
-     */
-    public function getTime()
-    {
-        return $this->time;
-    }
 
     /**
      * Set maxLimit
@@ -151,4 +98,17 @@ class eventtype
     {
         return $this->maxLimit;
     }
-}
+
+//    public function __construct()
+//    {
+//        parent::__construct();
+////        $this->id = $id;
+////        $this->eventName = $eventName;
+////        $this->maxLimit = $maxLimit;
+//    }
+//    
+    }
+
+  //  $x = new eventtype();
+    
+    

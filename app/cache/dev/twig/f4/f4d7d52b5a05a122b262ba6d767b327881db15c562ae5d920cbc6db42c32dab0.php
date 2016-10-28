@@ -21,45 +21,84 @@ class __TwigTemplate_a17385a003c356b7a7f89229e5304471cfe57ba0e51f77da8cbc029f7fa
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7f3121f77442603a779b05df1d42e1d68d721f7bda7601671d32e538f522156c = $this->env->getExtension("native_profiler");
-        $__internal_7f3121f77442603a779b05df1d42e1d68d721f7bda7601671d32e538f522156c->enter($__internal_7f3121f77442603a779b05df1d42e1d68d721f7bda7601671d32e538f522156c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
+        $__internal_874c88dc953bc449096d5953c0486f60f3a01fac17a36a263d8e14cc11f4cea7 = $this->env->getExtension("native_profiler");
+        $__internal_874c88dc953bc449096d5953c0486f60f3a01fac17a36a263d8e14cc11f4cea7->enter($__internal_874c88dc953bc449096d5953c0486f60f3a01fac17a36a263d8e14cc11f4cea7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "default/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_7f3121f77442603a779b05df1d42e1d68d721f7bda7601671d32e538f522156c->leave($__internal_7f3121f77442603a779b05df1d42e1d68d721f7bda7601671d32e538f522156c_prof);
+        $__internal_874c88dc953bc449096d5953c0486f60f3a01fac17a36a263d8e14cc11f4cea7->leave($__internal_874c88dc953bc449096d5953c0486f60f3a01fac17a36a263d8e14cc11f4cea7_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_d117ef9526828b9429cd536f4545b86123af00a9ae4968e7e677ddb4aa8beaa8 = $this->env->getExtension("native_profiler");
-        $__internal_d117ef9526828b9429cd536f4545b86123af00a9ae4968e7e677ddb4aa8beaa8->enter($__internal_d117ef9526828b9429cd536f4545b86123af00a9ae4968e7e677ddb4aa8beaa8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_231e8021a863be6c915638ceadccdc904ce00e27ec8fabc243dd69ca1701efd9 = $this->env->getExtension("native_profiler");
+        $__internal_231e8021a863be6c915638ceadccdc904ce00e27ec8fabc243dd69ca1701efd9->enter($__internal_231e8021a863be6c915638ceadccdc904ce00e27ec8fabc243dd69ca1701efd9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    
+";
+        // line 6
+        echo "<h3>Welcome to the Birthday Party registration!</h3>
+";
+        // line 8
+        echo "<p>Your After Breakfast event:</p>    
+";
+        // line 9
+        echo nl2br(twig_escape_filter($this->env, (isset($context["eT1Name"]) ? $context["eT1Name"] : $this->getContext($context, "eT1Name")), "html", null, true));
+        echo "
+";
+        // line 11
+        echo "<p>Your After Snacks event:</p>    
+";
+        // line 12
+        echo twig_escape_filter($this->env, (isset($context["eT2Name"]) ? $context["eT2Name"] : $this->getContext($context, "eT2Name")), "html", null, true);
+        echo "
+<p></p>
     ";
-        // line 5
+        // line 14
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
         echo "
     ";
-        // line 7
+        // line 15
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form', array("attr" => array("novalidate" => "novalidate")));
+        echo "
+    ";
+        // line 17
         echo "    ";
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
         echo "
     ";
-        // line 8
+        // line 18
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "flashbag", array()), "get", array(0 => "error"), "method"));
+        foreach ($context['_seq'] as $context["_key"] => $context["flashMessage"]) {
+            // line 19
+            echo "
+    ";
+            // line 20
+            echo twig_escape_filter($this->env, $context["flashMessage"], "html", null, true);
+            echo "
+
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashMessage'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 23
+        echo "    ";
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
     
     <a href=\"";
-        // line 10
+        // line 25
         echo twig_escape_filter($this->env, $this->env->getExtension('logout_url')->getLogoutPath("main"), "html", null, true);
         echo "\">Logout</a>
     
     ";
         
-        $__internal_d117ef9526828b9429cd536f4545b86123af00a9ae4968e7e677ddb4aa8beaa8->leave($__internal_d117ef9526828b9429cd536f4545b86123af00a9ae4968e7e677ddb4aa8beaa8_prof);
+        $__internal_231e8021a863be6c915638ceadccdc904ce00e27ec8fabc243dd69ca1701efd9->leave($__internal_231e8021a863be6c915638ceadccdc904ce00e27ec8fabc243dd69ca1701efd9_prof);
 
     }
 
@@ -75,16 +114,31 @@ class __TwigTemplate_a17385a003c356b7a7f89229e5304471cfe57ba0e51f77da8cbc029f7fa
 
     public function getDebugInfo()
     {
-        return array (  57 => 10,  52 => 8,  47 => 7,  43 => 5,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  96 => 25,  90 => 23,  81 => 20,  78 => 19,  74 => 18,  69 => 17,  65 => 15,  61 => 14,  56 => 12,  53 => 11,  49 => 9,  46 => 8,  43 => 6,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends 'base.html.twig' %}*/
 /* */
 /* {% block body %}*/
 /*     */
+/* {#    {{ greet | nl2br}}#}*/
+/* <h3>Welcome to the Birthday Party registration!</h3>*/
+/* {#    {{ selection1 }}#}*/
+/* <p>Your After Breakfast event:</p>    */
+/* {{ eT1Name | nl2br}}*/
+/* {#    {{ selection2 }}#}*/
+/* <p>Your After Snacks event:</p>    */
+/* {{ eT2Name }}*/
+/* <p></p>*/
 /*     {{ form_start(form) }}*/
+/*     {{ form(form, {'attr': {'novalidate': 'novalidate'}}) }}*/
 /*     {#{{ form_label(form.name, 'Choose Event') }}#}*/
 /*     {{ form_widget(form) }}*/
+/*     {% for flashMessage in app.session.flashbag.get('error') %}*/
+/* */
+/*     {{ flashMessage }}*/
+/* */
+/*     {% endfor %}*/
 /*     {{ form_end(form) }}*/
 /*     */
 /*     <a href="{{ logout_path('main') }}">Logout</a>*/

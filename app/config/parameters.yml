@@ -10,3 +10,8 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: bcb661eda8ced799e4ed78d43714cf2eaafe171e
+    pokermaxlimit: 12
+    chessmaxlimit: 4
+    cricketmaxlimit: 10
+    marblesmaxlimit: 10
+    footballmaxlimit: 10

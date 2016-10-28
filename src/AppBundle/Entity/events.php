@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+//use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * events
@@ -20,13 +21,6 @@ class events {
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-
-//    /**
-//     * @var int
-//     *
-//     * @ORM\Column(name="user_id", type="integer")
-//     */
-//    protected $user_id;
 
     /**
      * @var int
@@ -46,8 +40,8 @@ class events {
      * @ORM\OneToOne(targetEntity="users", inversedBy="event")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
-    protected $user;
-
+        protected $user;
+        
     /**
      * Get id
      *
@@ -58,22 +52,24 @@ class events {
     }
 
     /**
-     * Get user_id
-     *
-     * @return integer 
-     */
-    public function getuser_id() {
-        return $this->user_id;
-    }
-
-    /**
      * Set user
      *
-     * @param events $user
+     * @param users $user
      * @return events
      */
     public function setUser($user) {
         $this->user = $user;
+    
+        return $this;
+    }
+    
+    /**
+     * Get user
+     *
+     * @return events
+     */
+    public function getUser() {
+        return $this->user;
     }
 
     
@@ -119,13 +115,4 @@ class events {
         return $this->eT2;
     }
 
-//    public function __construct()
-//    {
-//        parent::__construct();
-////        $this->id = $id;
-////        $this->user_id = $user_id;
-////        $this->eT1 = $eT1;
-////        $this->eT2 = $eT2;
-////        $this->singleUser = $singleUser;
-//    }
 }

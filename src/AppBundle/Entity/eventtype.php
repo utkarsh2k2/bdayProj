@@ -21,6 +21,11 @@ class eventtype
      */
     protected $id;
 
+//    /**
+//     * @ORM\OneToOne(targetEntity="events", mappedBy="eventtype1")
+//     */
+//    protected $event1;
+    
     /**
      * @var string
      *
@@ -102,8 +107,27 @@ class eventtype
 ////        $this->maxLimit = $maxLimit;
 //    }
 //    
-    }
-
-  //  $x = new eventtype();
     
-    
+//    /**
+//     * Set event1
+//     *
+//     * @param \AppBundle\Entity\events $event1
+//     * @return eventtype
+//     */
+//    public function setEvent1(\AppBundle\Entity\events $event1 = null)
+//    {
+//        $this->event1 = $event1;
+//
+//        return $this;
+//    }
+//
+//    /**
+//     * Get event1
+//     *
+//     * @return \AppBundle\Entity\events 
+//     */
+//    public function getEvent1()
+//    {
+//        return $this->event1;
+//    }
+}

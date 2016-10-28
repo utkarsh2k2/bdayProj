@@ -21,22 +21,8 @@ class users extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-    
-//    /**
-//     * @ORM\Column(type="string", length=255)
-//     *
-//     * @Assert\NotBlank(message="Please enter your name.", groups={"Registration", "Profile"})
-//     * @Assert\Length(
-//     *     min=3,
-//     *     max=255,
-//     *     minMessage="The name is too short.",
-//     *     maxMessage="The name is too long.",
-//     *     groups={"Registration", "Profile"}
-//     * )
-//     */
-//    protected $name;
-    
-        /**
+
+    /**
      * Get id
      * @return integer 
      */
@@ -44,20 +30,16 @@ class users extends BaseUser
     {
         return $this->id;
     }
-    
+
     /**
      * @ORM\OneToOne(targetEntity="events", mappedBy="user")
      */
     protected $event;
-    
-    
-    public function __construct()
-    {
-        parent::__construct();
-        // your own logic
-        $this->event = new ArrayCollection();
-        //$this->id = $id;
-        //$this->name = $name;   
-         }
-    
+
+
+//    public function __construct()
+//    {
+//        parent::__construct(); 
+//         }
+
     }

@@ -2,9 +2,24 @@
 
 {% block body %}
     
+{#    {{ greet | nl2br}}#}
+<h3>Welcome to the Birthday Party registration!</h3>
+{#    {{ selection1 }}#}
+<p>Your After Breakfast event:</p>    
+{{ eT1Name | nl2br}}
+{#    {{ selection2 }}#}
+<p>Your After Snacks event:</p>    
+{{ eT2Name }}
+<p></p>
     {{ form_start(form) }}
+    {{ form(form, {'attr': {'novalidate': 'novalidate'}}) }}
     {#{{ form_label(form.name, 'Choose Event') }}#}
     {{ form_widget(form) }}
+    {% for flashMessage in app.session.flashbag.get('error') %}
+
+    {{ flashMessage }}
+
+    {% endfor %}
     {{ form_end(form) }}
     
     <a href="{{ logout_path('main') }}">Logout</a>
